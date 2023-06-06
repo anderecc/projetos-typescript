@@ -1,0 +1,80 @@
+.resposta{
+    display: flex;
+    height: 100px;
+    margin: 10px;
+    width: 80%;
+    min-width: 500px;
+    perspective: 1000px;
+}
+
+.conteudoResposta{
+    position: relative;
+    display: flex;
+    flex: 1;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+.respostaRevelada.conteudoResposta{
+    transform: rotateY(180deg);
+}
+
+.frente, .verso{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+.verso{
+    transform: rotateY(180deg);
+}
+
+.frente{
+    align-items: center;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+}
+
+.verso > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:  1;
+    border-radius: 12px;
+}
+
+.certa .valor, .errada .valor{
+    font-size: 1.5rem;
+}
+
+.certa{
+    background-color: #2baa2c;
+}
+
+.errada{
+    background-color: #e44e2c;
+}
+
+.letra{
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.valor{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
